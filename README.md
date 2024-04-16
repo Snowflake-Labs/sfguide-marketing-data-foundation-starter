@@ -1,19 +1,28 @@
 # Marketing Data Foundation Starter
 
-## Overview
-In this guide we will build a Call Centre Analytics solution built for analyzing insurance call center audio files. Leveraging Snowflake features like cortex, large language model running in Snowpark containers, we transcribes text and duration from audiofile,extracts essential information such as Customer details, Agent interactions, Sentiment analysis, Summary, Resolution from each audio call to name a few. Here are key highlights and features of the solution :
+## Introduction
 
-Whisper running in Snowpark Containers to Extract Text and Duration of the call from the audio files.
+Customers looking to use Snowflake for marketing use cases initially face a significant challenge: it is difficult to import all relevant marketing data into Snowflake and structure it in a unified format that downstream applications can easily utilize to power data-driven marketing.
 
-Using Cortex LLM functions for diarization to identify customer and representative.
+This starter solution tackles this challenge of creating a marketing data foundation by offering two independent solutions and a merged version, demonstrating how to integrate both solutions into a comprehensive 'marketing app suite'. 
+- Marketing Data Foundation Starter (Merges the two apps below into a ‘marketing app suite’)
+  - Data Foundation Starter for Customer 360
+  - Data Foundation Starter for Campaign Intelligence
 
-Snowpark and Cortext LLM function to summarize and extract various information from call conversation.
+This solution was inspired by how Snowflake runs its own end-to-end Marketing workflows entirely on top of the Snowflake Marketing Data Cloud.
 
-Using Cortex Vector Search and Embedding to store embedding in Vector Type.
+## Solution Space
 
-LLM model fine tuned for SQL queries running in SPCS for converting natural language to SQL query.
+### Context
 
-Streamlit APP which has a dashboard for audio analytics, chatbot on your data using RAG based approach. Also a Text2SQL chatbot for generating SQL queries and executing them from natural language input text.
+As described in the diagram below, the two Data Foundation use cases in this starter lay the groundwork to support the two Marketing Execution use cases: Planning & Activation, and Measurement.
+
+![Alt text](images/context.png)
+
+More specifically, this solution covers Data Ingestion, Semantic Unification, and based Analytics use cases for Customer 360 and Campaign Intelligence data.
+
+![Alt text](images/context2.png)
+
 
 ## Step-By-Step Guide
 
@@ -54,7 +63,7 @@ Refer to the screenshot below for more info.
 git clone https://github.com/Snowflake-Labs/sfguide-marketing-data-foundation-starter.git
 `
 
-## Building NativeApplication
+## Building Native Application
 
 ### Step 1: Create Database objects
 
