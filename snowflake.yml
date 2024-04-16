@@ -1,0 +1,10 @@
+definition_version: 1
+native_app:
+  name: Snowflake_for_Marketing_App
+  source_stage: app_src.stage
+  artifacts:
+    - src: Snowflake_for_Marketing_App/*
+      dest: ./
+  package:
+    scripts:
+      - sql_scripts/shared-content.sql

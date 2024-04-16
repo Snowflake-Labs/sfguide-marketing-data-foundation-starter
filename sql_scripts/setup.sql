@@ -20,3 +20,6 @@ create or replace stage scripts_stg
     comment = 'used for holding scripts.';
 
 -- --------------------------------------
+
+use database MARKETING_DATA_FOUNDATAION;
+use schema demo;

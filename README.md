@@ -33,6 +33,21 @@ pip install snowflake-cli-labs
 
 Please follow the instructions in our documentation to configure your [connection to Snowflake](https://docs.snowflake.com/en/developer-guide/snowflake-cli-v2/connecting/specify-credentials)
 
+#### Create a connection
+
+`
+snow connection add
+`
+
+`
+snow connection test --connection="test_connection"
+`
+
+Refer to the screenshot below for more info.
+
+
+![Alt text](<Images/Snow connection - create and test.png>)
+
 ## Clone the git repo
 
 `
@@ -45,6 +60,12 @@ git clone https://github.com/Snowflake-Labs/sfguide-marketing-data-foundation-st
 
 Navigate to the repo folder in your local machine and run the below command to create your database, schema and stage objects
 
+First lets export the connection name to the default connection
+
+`
+export SNOWFLAKE_DEFAULT_CONNECTION_NAME=marketing_demo_conn
+`
+
 `
 snow sql -f sql_scripts/setup.sql
 `
@@ -53,9 +74,23 @@ snow sql -f sql_scripts/setup.sql
 
 Upload all the sample data files in the folder data to stage created in step 1
 
+
+` 
+snow object stage copy data/worldcities.csv @MARKETING_DATA_FOUNDATAION.demo.data_stg/data
 `
-snow object stage copy data @data_stg/data
+
 `
+snow object stage copy data/sf_data/ @MARKETING_DATA_FOUNDATAION.demo.data_stg/data/sf_data/
+`
+
+`
+snow object stage copy data/ga_data/ @MARKETING_DATA_FOUNDATAION.demo.data_stg/data/ga_data/
+`
+
+`
+snow object stage copy data/sample_data.gz @MARKETING_DATA_FOUNDATAION.demo.data_stg/data/
+`
+
 
 If the upload fails due to access issue then, please follow the instructions in this [document](https://docs.snowflake.com/en/user-guide/data-load-local-file-system-stage-ui) to upload the files directly to Snowflake Stage.
 

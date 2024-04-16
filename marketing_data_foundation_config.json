@@ -1,8 +1,0 @@
-{
-    "database": "MARKETING_DATA_FOUNDATAION"
-    ,"schema": "DEMO"
-    ,"warehouse": "COMPUTE_WH"
-    ,"role":"ACCOUNTADMIN"
-    ,"nativeapp_name":"Marketing_Data_Foundataion"
-}
-
