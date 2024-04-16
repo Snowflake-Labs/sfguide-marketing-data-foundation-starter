@@ -1,0 +1,10 @@
+name: snowmarketing
+channels:
+- snowflake
+dependencies:
+- python=3.8.12
+- snowflake-snowpark-python
+- matplotlib
+- seaborn
+- plotly
+- pydeck
