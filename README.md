@@ -6,8 +6,8 @@ Customers looking to use Snowflake for marketing use cases initially face a sign
 
 This starter solution tackles this challenge of creating a marketing data foundation by offering two independent solutions and a merged version, demonstrating how to integrate both solutions into a comprehensive 'marketing app suite'. 
 - Marketing Data Foundation Starter (Merges the two apps below into a ‘marketing app suite’)
-  - Data Foundation Starter for Customer 360
-  - Data Foundation Starter for Campaign Intelligence
+  - [Data Foundation Starter for Customer 360](https://github.com/Snowflake-Labs/sfguide-marketing-data-foundation-starter-customer-360)
+  - [Data Foundation Starter for Campaign Intelligence](https://github.com/Snowflake-Labs/sfguide-marketing-data-foundation-starter-campaign-intelligence)
 
 This solution was inspired by how Snowflake runs its own end-to-end Marketing workflows entirely on top of the Snowflake Marketing Data Cloud.
 
